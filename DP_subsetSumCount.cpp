@@ -10,7 +10,7 @@ int main() {
 	memset(dp,0,sizeof(dp));
 	for(dp[0][0]=0,i=1;i<=n;++i){
 	    for(j=1;j<=sum;++j){
-	        if(a[i-1]<=j)dp[i][j]=((dp[i-1][j-a[i-1]])+(dp[i-1][j]));
+	        if(a[i-1]<=j)dp[i][j]=((dp[i][j-a[i-1]])+(dp[i-1][j]));
 	        else dp[i][j]=dp[i-1][j];
 	    }
 	}
